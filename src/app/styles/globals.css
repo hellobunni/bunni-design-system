@@ -1,8 +1,35 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neutral Base */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-500: #737373;
+  --gray-700: #404040;
+  --gray-900: #171717;
+
+  /* Periwinkle (Bunni Primary) */
+  --periwinkle-100: #e4e4ff;
+  --periwinkle-300: #c1c1f7;
+  --periwinkle-500: #9e9ee6;
+  --periwinkle-700: #7c7ccf;
+
+  /* Alert Colors */
+  --warning-100: #fff9db;
+  --warning-500: #facc15; /* Tailwind yellow-400 */
+  --warning-700: #b45309;
+
+  --danger-100: #fee2e2;
+  --danger-500: #ef4444; /* Tailwind red-500 */
+  --danger-700: #991b1b;
+
+  /* Defaults */
+  --background: var(--white);
+  --foreground: var(--gray-900);
+  --transparent: transparent;
   --blue-500: #3b82f6; /* Tailwind blue-500 */
   --indigo-300: #a5b4fc; /* Tailwind indigo-300 */
   --blue-300: #60a5fa; /* Tailwind blue-300 */
@@ -13,13 +40,30 @@
   --transparent: transparent;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Brand Colors */
+  --color-primary: var(--periwinkle-500);
+  --color-primary-light: var(--periwinkle-100);
+  --color-primary-dark: var(--periwinkle-700);
+
+  /* System Colors */
+  --color-muted: var(--gray-200);
+  --color-border: var(--gray-300);
+
+  --color-warning: var(--warning-500);
+  --color-warning-light: var(--warning-100);
+  --color-warning-dark: var(--warning-700);
+
+  --color-danger: var(--danger-500);
+  --color-danger-light: var(--danger-100);
+  --color-danger-dark: var(--danger-700);
+
   --font-sans: var(--font-noto-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Aurora animation utility */
   --animate-aurora: aurora 50s linear infinite;
 
   @keyframes aurora {
@@ -38,9 +82,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    /* No need to override aurora colors unless you want a different palette for dark mode */
+    --background: var(--black);
+    --foreground: var(--gray-100);
+
+    --warning-100: #2f2a10;
+    --danger-100: #3a1a1a;
   }
 }
 
