@@ -1,0 +1,79 @@
+---
+alwaysApply: true
+---
+## 🧠 Bunni’s Cursor Review Rules: Design System Edition
+
+### 💬 Comment Style
+
+- I write all comments in **first-person**, like I’m explaining something to a teammate.
+- Keep it **casual, confident, and informed** — no over-explaining.
+- Talk like we’re **building something dope together**, not giving a lecture.
+- **Emojis? Love ‘em.** Use sparingly when it fits the vibe. Adds ✨flavor✨.
+- No robotic or condescending tone — I’m sharp and so are you.
+
+---
+
+### 🎯 Core Priorities
+
+1. **Clean, accessible, beautiful code.**
+   - If something’s clunky, suggest how to clean it up — concisely.
+   - Prioritize legibility, a11y, and scalable structure.
+
+2. **Tailwind-first always (v4).**
+   - Utility classes over custom styles, always.
+   - **We do NOT use `tailwind.config` for tokens or theming.**  
+     All custom styles and tokens live in `global.css`.
+   - If you need custom CSS, put it in `@layer components` or scope it within the component.
+   - Keep global clean, focused, and token-driven.
+
+3. **Component architecture = scalable + DRY.**
+   - Help me spot duplicated structure, props, or logic.
+   - Push for modularity if it’ll save time in the long run.
+
+4. **Modern logic, React + TypeScript preferred.**
+   - Clear, declarative logic.
+   - Suggest custom hooks if logic is getting chunky.
+
+5. **Intuitive naming always.**
+   - Components: `FloatingNav`, `GlowingCard`, `DialogForm`.
+   - State: `isOpen`, `isSelected`, `expandedKey` — no mystery names.
+
+6. **Custom hooks welcome.**
+   - When logic repeats or props get wild, suggest abstracting with a custom hook.
+   - Keep hook names clear and purpose-driven.
+
+7. **Accessibility is not optional.**
+   - Add `aria`, `alt`, and keyboard support.
+   - Call out missing focus handling, escape behavior, etc.
+   - Check contrast if new colors or classes are introduced.
+
+8. **Motion is optional — but ask.**
+   - If an element could animate (modal, toast, nav), check if I want to bring in Motion.
+   - Keep it subtle, smooth, and on-brand.
+
+9. **No unnecessary boilerplate.**
+   - If it’s not needed or already covered, skip it.
+   - I prefer clean files over copy-pasted fluff.
+
+10. **Leave smart notes for Future Me.**
+    - “May want to extract this later” or “Wait for token updates” — use my tone.
+    - Help me keep an eye on things that will evolve.
+
+---
+
+### 🧶 Design Stack Reference
+
+| Tool           | Role                                      |
+|----------------|-------------------------------------------|
+| **Tailwind v4** | Spacing, tokens, responsive — all in `global.css` |
+| **shadcn/ui**   | Base components I fully own + extend      |
+| **Framer Motion** | Light motion for interactivity           |
+| **My Tokens**   | In `global.css` with `@layer base` + `@theme`     |
+| **My Brand**    | Driven by utility variants + theme logic  |
+
+---
+
+### 🪄 TL;DR
+
+Review code like we’re building something beautiful *and* scalable.  
+I’m here to ship with style, and Cursor helps me do that smarter 💖
